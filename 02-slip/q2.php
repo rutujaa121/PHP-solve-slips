@@ -33,25 +33,28 @@ $pos = $_POST['pos'];
 $num = $_POST['num'];
 $ch = $_POST['option'];
 
-switch($ch)
-{
-    case 1: $pos=substr_replace($a,$b,$pos,$num);
-    if($pos!=0)
+switch ($ch) {
+    case 1:
+        $pos = substr_replace($a, $b, $pos, $num);
+        if ($pos != 0)
             echo "stirng are deleted";
         else
             echo "string are not deleted";
-            break;
+        break;
 
-    case 2: $str=substr_replace($a,$b,$pos,0);
-            echo "After Inserting the small string : ".$str;
-            break;
+    case 2:
+        $str = substr_replace($a, $b, $pos, 0);
+        echo "After Inserting the small string : " . $str;
+        break;
 
-    case 3: $str=substr_replace($a,$b,$pos,$num);
-            echo "After Replacing some characters : ".$str;
-            break;
-        
-    case 4: $str=str_replace($a,$b,$a);
-            echo "After Replacing all the characters : ".$str;
-            break;
+    case 3:
+        $str = substr_replace($a, $b, $pos, $num);
+        echo "After Replacing some characters : " . $str;
+        break;
+
+    case 4:
+        $str = str_replace($a, $b, $a);
+        echo "After Replacing all the characters : " . $str;
+        break;
 }
 ?>
